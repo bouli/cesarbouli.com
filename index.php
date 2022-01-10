@@ -60,35 +60,16 @@ $meta_title = "Cesar Bouli";
 <body>
 	<div id="disco">
 		<?php
-			$myRand = rand(1,5);
+			$myRand = rand(1,2);
+			
 			if($myRand == 1){
-				?>
-				<a href="https://open.spotify.com/album/1OsNmi4RHCTUgUVE1Vor1y" target="_blank"><img src="images/Capa_Decole.jpg?<?php //echo rand(0,1223131) ?>" /><br />
-		Decole</a><br />
-				<?php
-			}
-			if($myRand == 2){
-				?>
-				<a href="https://open.spotify.com/album/65KwnCuebiHKeXQ1YZiVOD" target="_blank"><img src="images/Capa_WOYou.jpg?<?php //echo rand(0,1223131) ?>" /><br />
-		W/O You</a><br />
-				<?php
-			}
-			if($myRand == 3){
-				?>
-				<a href="https://open.spotify.com/album/5SZkI3EpxDO2zVElUvF8RX" target="_blank"><img src="images/Capa_ValeAPena.jpg?<?php //echo rand(0,1223131) ?>" /><br />
-		Vale a Pena</a><br />
-				<?php
-			}
-
-
-			if($myRand == 4){
 				?>
 				<a href="https://open.spotify.com/album/6WMQfW07qWUaFJpp298uPi" target="_blank"><img src="images/Capa_TellMeYourName.jpg?<?php //echo rand(0,1223131) ?>" /><br />
 		Tell Me Your Name</a><br />
 				<?php
 			}
 
-			if($myRand == 5){
+			if($myRand == 2){
 				?>
 				<a href="https://open.spotify.com/album/1o2nq3TbCGmFmgsBth1XL1" target="_blank"><img src="images/Capa_StreetProsecution.jpg?<?php //echo rand(0,1223131) ?>" /><br />
 		Street Prosecution</a><br />
