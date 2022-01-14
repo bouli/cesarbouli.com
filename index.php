@@ -1,5 +1,5 @@
 ﻿<?php 
-$meta_image = "http://www.bouli.com.br/images/photo.jpg";
+$meta_image = "http://cesarbouli.com/images/photo.jpg";
 $meta_text = "Escute Cesar Bouli.";
 $meta_title = "Cesar Bouli";
 ?><!DOCTYPE html>
@@ -41,7 +41,7 @@ $meta_title = "Cesar Bouli";
 	<meta name="description" content="<?php echo $meta_text; ?>" /> 
 
 	<meta property="og:locale" content="pt-br" />
-	<meta property="og:url" content="http://www.bouli.com.br"> 
+	<meta property="og:url" content="http://cesarbouli.com"> 
 	<meta property="og:title" content="<?php echo $meta_title; ?>"> 
 	<meta property="og:site_name" content="<?php echo $meta_title; ?>"> 
 	<meta property="og:description" content="<?php echo $meta_text; ?>"> 
@@ -69,6 +69,7 @@ $meta_title = "Cesar Bouli";
 				<?php
 			}
 
+			
 			if($myRand == 2){
 				?>
 				<a href="https://open.spotify.com/album/1o2nq3TbCGmFmgsBth1XL1" target="_blank"><img src="images/Capa_StreetProsecution.jpg?<?php //echo rand(0,1223131) ?>" /><br />
