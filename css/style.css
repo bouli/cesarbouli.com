@@ -12,10 +12,10 @@ html {
 body img.logo {
     display: block;
     position: fixed;
-    float: right;
+    f1loat: right;
     max-width: 100%;
     bottom:0;
-    left:0;
+    right:0;
 }
 
 body div {
