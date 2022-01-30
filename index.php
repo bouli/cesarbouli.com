@@ -83,4 +83,7 @@ $meta_title = "Cesar Bouli";
 	</div>
 	<a href="https://open.spotify.com/playlist/0PmQC52w1gm5TY9le9IyLt" target="_blank"><img src="images/logo.png?<?php echo rand(0,1223131) ?>" alt="Cesar Bouli" class="logo" /></a>
 </body>
+<script>
+window.location.replace("https://open.spotify.com/playlist/280Kv8R7Js4QLIF8o94YlZ");
+</script>
 </html>
