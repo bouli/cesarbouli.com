@@ -5,6 +5,9 @@ $meta_title = "Cesar Bouli";
 ?><!DOCTYPE html>
 <html lang="es">
 <head> 
+	<script>
+	window.location.replace("https://open.spotify.com/playlist/280Kv8R7Js4QLIF8o94YlZ");
+	</script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122379890-1"></script>
 	<script>
@@ -83,7 +86,4 @@ $meta_title = "Cesar Bouli";
 	</div>
 	<a href="https://open.spotify.com/playlist/0PmQC52w1gm5TY9le9IyLt" target="_blank"><img src="images/logo.png?<?php echo rand(0,1223131) ?>" alt="Cesar Bouli" class="logo" /></a>
 </body>
-<script>
-window.location.replace("https://open.spotify.com/playlist/280Kv8R7Js4QLIF8o94YlZ");
-</script>
 </html>
