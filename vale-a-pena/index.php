@@ -1,6 +1,6 @@
 <?php 
 $meta_image = "http://cesarbouli.com/images/vale-a-pena/photo.jpg";
-$meta_text = "Escute o novo single Vale a Pena de Cesar Bouli.";
+$meta_text = "Dia 23 de fevereiro, lanço o primeiro single, Vale a Pena, do meu primeiro disco solo que logo logo tá chegando! Dá aquela força nas redes sociais abaixo e faça seu pre-save!";
 $meta_title = "Cesar Bouli - Vale a Pena";
 $root_url = "http://cesarbouli.com";
 ?><!DOCTYPE html>
@@ -27,7 +27,7 @@ $root_url = "http://cesarbouli.com";
 	<meta name="description" content="<?php echo $meta_text; ?>" /> 
 
 	<meta property="og:locale" content="pt-br" />
-	<meta property="og:url" content="http://cesarbouli.com"> 
+	<meta property="og:url" content="http://cesarbouli.com/vale-a-pena"> 
 	<meta property="og:title" content="<?php echo $meta_title; ?>"> 
 	<meta property="og:site_name" content="<?php echo $meta_title; ?>"> 
 	<meta property="og:description" content="<?php echo $meta_text; ?>"> 
@@ -46,7 +46,7 @@ $root_url = "http://cesarbouli.com";
 <body>
 	<div id="disco">
 		<?php
-			$myRand = rand(1,2);
+			/*$myRand = rand(1,2);
 			
 			if($myRand == 1){
 				?>
@@ -62,7 +62,7 @@ $root_url = "http://cesarbouli.com";
 		Street Prosecution</a><br />
 				<?php
 			}
-			
+			*/
 		?>
 		
 
