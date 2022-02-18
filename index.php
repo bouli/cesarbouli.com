@@ -6,7 +6,8 @@ $meta_title = "Cesar Bouli";
 <html lang="es">
 <head> 
 	<script>
-	window.location.replace("https://distrokid.com/hyperfollow/cesarbouli/vale-a-pena-4");
+		window.location.replace("https://www.youtube.com/watch?v=z5vHM239VC8"); //videoclipe
+//	window.location.replace("https://distrokid.com/hyperfollow/cesarbouli/vale-a-pena-4");
 	</script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122379890-1"></script>
