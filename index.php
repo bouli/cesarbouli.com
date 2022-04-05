@@ -1,13 +1,12 @@
-﻿<?php 
+﻿<?php
 $meta_image = "http://cesarbouli.com/images/photo.jpg";
 $meta_text = "Escute Cesar Bouli.";
 $meta_title = "Cesar Bouli";
 ?><!DOCTYPE html>
 <html lang="es">
-<head> 
+<head>
 	<script>
-		window.location.replace("https://www.youtube.com/watch?v=z5vHM239VC8"); //videoclipe
-//	window.location.replace("https://distrokid.com/hyperfollow/cesarbouli/vale-a-pena-4");
+		window.location.replace("https://www.youtube.com/watch?v=RJHx5Toxwzk"); //videoclipe
 	</script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122379890-1"></script>
@@ -40,15 +39,15 @@ $meta_title = "Cesar Bouli";
 
 	<meta name="msapplication-TileColor" content="#000000">
 	<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
-	
+
 	<meta name="theme-color" content="#000000">
-	<meta name="description" content="<?php echo $meta_text; ?>" /> 
+	<meta name="description" content="<?php echo $meta_text; ?>" />
 
 	<meta property="og:locale" content="pt-br" />
-	<meta property="og:url" content="http://cesarbouli.com"> 
-	<meta property="og:title" content="<?php echo $meta_title; ?>"> 
-	<meta property="og:site_name" content="<?php echo $meta_title; ?>"> 
-	<meta property="og:description" content="<?php echo $meta_text; ?>"> 
+	<meta property="og:url" content="http://cesarbouli.com">
+	<meta property="og:title" content="<?php echo $meta_title; ?>">
+	<meta property="og:site_name" content="<?php echo $meta_title; ?>">
+	<meta property="og:description" content="<?php echo $meta_text; ?>">
 	<meta property="og:image" content="<?php echo $meta_image; ?>">
 	<meta property="og:image:type" content="image/png">
 	<meta property="og:image:width" content="948">
@@ -65,7 +64,7 @@ $meta_title = "Cesar Bouli";
 	<div id="disco">
 		<?php
 			$myRand = rand(1,2);
-			
+
 			if($myRand == 1){
 				?>
 				<a href="https://open.spotify.com/album/6WMQfW07qWUaFJpp298uPi" target="_blank"><img src="images/Capa_TellMeYourName.jpg?<?php //echo rand(0,1223131) ?>" /><br />
@@ -73,16 +72,16 @@ $meta_title = "Cesar Bouli";
 				<?php
 			}
 
-			
+
 			if($myRand == 2){
 				?>
 				<a href="https://open.spotify.com/album/1o2nq3TbCGmFmgsBth1XL1" target="_blank"><img src="images/Capa_StreetProsecution.jpg?<?php //echo rand(0,1223131) ?>" /><br />
 		Street Prosecution</a><br />
 				<?php
 			}
-			
+
 		?>
-		
+
 
 	</div>
 	<a href="https://open.spotify.com/playlist/0PmQC52w1gm5TY9le9IyLt" target="_blank"><img src="images/logo.png?<?php echo rand(0,1223131) ?>" alt="Cesar Bouli" class="logo" /></a>
