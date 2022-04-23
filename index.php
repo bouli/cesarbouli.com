@@ -1,12 +1,12 @@
 ﻿<?php
 $meta_image = "http://cesarbouli.com/images/photo.jpg";
-$meta_text = "Escute Cesar Bouli.";
-$meta_title = "Cesar Bouli";
+$meta_text = "Ouça Cesar Bouli.";
+$meta_title = "Ouça: Cesar Bouli";
 ?><!DOCTYPE html>
-<html lang="es">
+<html lang="pt">
 <head>
 	<script>
-		window.location.replace("https://www.youtube.com/watch?v=RJHx5Toxwzk"); //videoclipe
+		//window.location.replace("https://www.youtube.com/watch?v=RJHx5Toxwzk"); //videoclipe
 	</script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122379890-1"></script>
@@ -63,27 +63,30 @@ $meta_title = "Cesar Bouli";
 <body>
 	<div id="disco">
 		<?php
-			$myRand = rand(1,2);
+		if(@date("Ymd")>20220511){
+			?>
+			<a alt="Disco 'Cesar Bouli'" title="Ouça o disco 'Cesar Bouli'" href="cesar-bouli" target="_blank"><img src="images/cesar-bouli/photo.jpg?<?php //echo rand(0,1223131) ?>" /><br />
+				Ouça o disco "Cesar Bouli"
+			</a>
+			<?php
 
-			if($myRand == 1){
-				?>
-				<a href="https://open.spotify.com/album/6WMQfW07qWUaFJpp298uPi" target="_blank"><img src="images/Capa_TellMeYourName.jpg?<?php //echo rand(0,1223131) ?>" /><br />
-		Tell Me Your Name</a><br />
-				<?php
-			}
-
-
-			if($myRand == 2){
-				?>
-				<a href="https://open.spotify.com/album/1o2nq3TbCGmFmgsBth1XL1" target="_blank"><img src="images/Capa_StreetProsecution.jpg?<?php //echo rand(0,1223131) ?>" /><br />
-		Street Prosecution</a><br />
-				<?php
-			}
-
+		}else{
+			?>
+			<a alt="Single 'Hey, Irmão'" title="Ouça o single 'Hey, Irmão'" href="hey-irmao" target="_blank"><img src="images/hey-irmao/photo.jpg?<?php //echo rand(0,1223131) ?>" /><br />
+				Ouça "Hey, Irmão"
+			</a>
+			<?php
+		}
 		?>
-
-
+		<br />
 	</div>
-	<a href="https://open.spotify.com/playlist/0PmQC52w1gm5TY9le9IyLt" target="_blank"><img src="images/logo.png?<?php echo rand(0,1223131) ?>" alt="Cesar Bouli" class="logo" /></a>
+	<img src="images/logo.png?<?php echo rand(0,1223131) ?>" alt="Cesar Bouli" class="logo" />
+	<menu>
+		<a alt="Cesar Bouli - SoundCloud" title="Follow Cesar Bouli on SoundCloud" href="https://soundcloud.com/cesar-bouli" target="_blank"><img src="images/links-soundcloud.png" /></a></br />
+		<a alt="Cesar Bouli - Facebook"   title="Follow Cesar Bouli on Facebook" href="https://www.facebook.com/cesarbouli" target="_blank"><img src="images/links-facebook.png" /></a></br />
+		<a alt="Cesar Bouli - Instagram"  title="Follow Cesar Bouli on Instagram" href="https://www.instagram.com/cesarbouli" target="_blank"><img src="images/links-instagram.png" /></a></br />
+		<a alt="Cesar Bouli - Youtube"    title="Follow Cesar Bouli on Youtube" href="https://www.youtube.com/cesarbouli" target="_blank"><img src="images/links-youtube.png" /></a></br />
+		<a alt="Cesar Bouli - Spotify"    title="Follow Cesar Bouli on Spotify" href="https://open.spotify.com/artist/16K0CW2ObGqglDFtWjxbMb" target="_blank"><img src="images/links-spotify.png" />
+	</menu>
 </body>
 </html>

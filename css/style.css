@@ -1,18 +1,18 @@
 
-html { 
-  background: url(../images/photo.jpg) no-repeat center center fixed; 
+html {
+  background: url(../images/photo.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 100%;
     overflow: hidden;
+    font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body img.logo {
     display: block;
     position: fixed;
-    f1loat: right;
     max-width: 100%;
     bottom:0;
     right:0;
@@ -38,4 +38,9 @@ a {
     color:#FFF;
     text-transform: none;
     text-decoration: none;
+}
+
+menu {
+    padding:20px;
+    float:right;
 }
