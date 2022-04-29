@@ -7,7 +7,7 @@ html {
     background-size: cover;
     height: 100%;
     overflow: hidden;
-    font-family: Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Cabin Sketch',Helvetica, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body img.logo {

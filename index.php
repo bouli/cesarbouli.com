@@ -53,7 +53,9 @@ $meta_title = "Ouça: Cesar Bouli";
 	<meta property="og:image:width" content="948">
 	<meta property="og:image:height" content="424">
 	<meta property="og:type" content="website" />
-
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css?<?php echo rand(0,1223131) ?>">
 
