@@ -62,22 +62,19 @@ $meta_title = "Ouça: Cesar Bouli";
 </head>
 <body>
 	<div id="disco">
-		<?php
+			<a alt="Disco 'Cesar Bouli'" title="Ouça o disco 'Cesar Bouli'" href="cesar-bouli" target="_blank"><img src="images/cesar-bouli/photo.jpg?<?php //echo rand(0,1223131) ?>" /><br />
+			<?php
 		if(@date("Ymd")>20220511){
 			?>
-			<a alt="Disco 'Cesar Bouli'" title="Ouça o disco 'Cesar Bouli'" href="cesar-bouli" target="_blank"><img src="images/cesar-bouli/photo.jpg?<?php //echo rand(0,1223131) ?>" /><br />
 				Ouça o disco "Cesar Bouli"
-			</a>
 			<?php
-
 		}else{
 			?>
-			<a alt="Single 'Hey, Irmão'" title="Ouça o single 'Hey, Irmão'" href="hey-irmao" target="_blank"><img src="images/hey-irmao/photo.jpg?<?php //echo rand(0,1223131) ?>" /><br />
-				Ouça "Hey, Irmão"
-			</a>
+				Lançamento do disco<br /> "Cesar Bouli" dia 12/05
 			<?php
 		}
 		?>
+			</a>
 		<br />
 	</div>
 	<img src="images/logo.png?<?php echo rand(0,1223131) ?>" alt="Cesar Bouli" class="logo" />
