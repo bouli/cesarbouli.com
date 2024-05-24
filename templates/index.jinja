@@ -70,7 +70,7 @@
 			</a>
 		<br />
 	</div>
-	<img src="{{ url_for('static',filename="images/logo.png") }}" alt="{{ artist_name }}" class="logo" />
+	<img src="{{ url_for('static',filename="images/" + domain + "/logo.png") }}" alt="{{ artist_name }}" class="logo" />
 	<menu>
 		{% if soundcloud_link %}
 			<a alt="{{ artist_name }} - SoundCloud" title="Follow {{ artist_name }} on SoundCloud" href="{{ soundcloud_link }}" target="_blank"><img src="{{ url_for('static',filename="images/links-soundcloud.png") }}" /></a></br />
