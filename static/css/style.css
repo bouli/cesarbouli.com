@@ -1,12 +1,14 @@
 html {
   background: url("../images/photo.jpg") no-repeat center center fixed;
+  /* stylelint-disable */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  /* stylelint-enable */
   background-size: cover;
   height: 100%;
   overflow: hidden;
-  font-family: 'Cabin Sketch', Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Cabin Sketch", Helvetica, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body img.logo {
@@ -29,6 +31,7 @@ body div {
   width: 40%;
   padding: 5%;
 }
+
 body div img {
   max-width: 70%;
 }
