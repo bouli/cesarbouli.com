@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% set bg_image_url = url_for("static", filename="images/" + domain + "/photo.jpg") %}<!DOCTYPE html>
 <html lang="pt">
 <head>
 	<script>
@@ -40,38 +40,53 @@
 	<meta name="description" content="{{ meta_text }}" />
 
 	<meta property="og:locale" content="pt-br" />
-	<meta property="og:url" content="http://cesarbouli.com">
-	<meta property="og:title" content="{{ meta_title }}">
-	<meta property="og:site_name" content="{{ meta_title }}">
-	<meta property="og:description" content="{{ meta_text }}">
-	<meta property="og:image" content="{{ meta_image }}">
-	<meta property="og:image:type" content="image/png">
-	<meta property="og:image:width" content="948">
-	<meta property="og:image:height" content="424">
+	<meta property="og:url" content="{{ url }}" />
+	<meta property="og:title" content="{{ meta_title }}" />
+	<meta property="og:site_name" content="{{ meta_title }}" />
+	<meta property="og:description" content="{{ meta_text }}" />
+	<meta property="og:image" content="{{ meta_url + bg_image_url }}" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="948" />
+	<meta property="og:image:height" content="424" />
 	<meta property="og:type" content="website" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="{{ url_for('static',filename="css/reset.css") }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename="css/style.css") }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="{{ url_for("static",filename="css/reset.css") }}" />
+	<style>
+		html {
+			background: url("{{ bg_image_url }}") no-repeat center center fixed;
+		}
+	</style>
+	<link rel="stylesheet" href="{{ url_for("static",filename="css/style.css") }}" />
 
-    <title>{{ meta_title }}</title>
+	<title>{{ meta_title }}</title>
 
 </head>
 <body>
 	<div id="disco">
-			<a alt="'{{ cta }}'" title="{{ cta }}'" href="{{ url_for(cta_url) }}" target="_blank"><img src="{{ url_for('static', filename= "images/cta.jpg") }}" /><br />
+			<a alt="'{{ cta }}'" title="{{ cta }}'" href="{{ url_for(cta_url) }}" target="_blank"><img src="{{ url_for('static', filename="images/" + domain + "/cta.jpg") }}" /><br />
 				{{ cta }}
 			</a>
 		<br />
 	</div>
 	<img src="{{ url_for('static',filename="images/logo.png") }}" alt="{{ artist_name }}" class="logo" />
 	<menu>
-		<a alt="{{ artist_name }} - SoundCloud" title="Follow {{ artist_name }} on SoundCloud" href="https://soundcloud.com/cesar-bouli" target="_blank"><img src="{{ url_for('static',filename="images/links-soundcloud.png") }}" /></a></br />
-		<a alt="{{ artist_name }} - Facebook"   title="Follow {{ artist_name }} on Facebook" href="https://www.facebook.com/cesarbouli" target="_blank"><img src="{{ url_for('static',filename="images/links-facebook.png") }}" /></a></br />
-		<a alt="{{ artist_name }} - Instagram"  title="Follow {{ artist_name }} on Instagram" href="https://www.instagram.com/cesarbouli" target="_blank"><img src="{{ url_for('static',filename="images/links-instagram.png") }}" /></a></br />
-		<a alt="{{ artist_name }} - Youtube"    title="Follow {{ artist_name }} on Youtube" href="https://www.youtube.com/cesarbouli" target="_blank"><img src="{{ url_for('static',filename="images/links-youtube.png") }}" /></a></br />
-		<a alt="{{ artist_name }} - Spotify"    title="Follow {{ artist_name }} on Spotify" href="https://open.spotify.com/artist/16K0CW2ObGqglDFtWjxbMb" target="_blank"><img src="{{ url_for('static',filename="images/links-spotify.png") }}" />
+		{% if soundcloud_link %}
+			<a alt="{{ artist_name }} - SoundCloud" title="Follow {{ artist_name }} on SoundCloud" href="{{ soundcloud_link }}" target="_blank"><img src="{{ url_for('static',filename="images/links-soundcloud.png") }}" /></a></br />
+		{% endif %}
+		{% if facebook_link %}
+			<a alt="{{ artist_name }} - Facebook"   title="Follow {{ artist_name }} on Facebook" href="{{ facebook_link }}" target="_blank"><img src="{{ url_for('static',filename="images/links-facebook.png") }}" /></a></br />
+		{% endif %}
+		{% if instagram_link %}
+			<a alt="{{ artist_name }} - Instagram"  title="Follow {{ artist_name }} on Instagram" href="{{ instagram_link }}" target="_blank"><img src="{{ url_for('static',filename="images/links-instagram.png") }}" /></a></br />
+		{% endif %}
+		{% if youtube_link %}
+			<a alt="{{ artist_name }} - Youtube"    title="Follow {{ artist_name }} on Youtube" href="{{ youtube_link }}" target="_blank"><img src="{{ url_for('static',filename="images/links-youtube.png") }}" /></a></br />
+		{% endif %}
+		{% if spotify_link %}
+			<a alt="{{ artist_name }} - Spotify"    title="Follow {{ artist_name }} on Spotify" href="{{ spotify_link }}" target="_blank"><img src="{{ url_for('static',filename="images/links-spotify.png") }}" />
+		{% endif %}
 	</menu>
 </body>
 </html>
