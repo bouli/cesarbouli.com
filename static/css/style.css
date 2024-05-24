@@ -1,0 +1,53 @@
+html {
+  background: url("../images/photo.jpg") no-repeat center center fixed;
+  /* stylelint-disable */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /* stylelint-enable */
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Cabin Sketch", Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body img.logo {
+  display: block;
+  position: fixed;
+  max-width: 100%;
+  bottom: 0;
+  right: 0;
+}
+
+body div {
+  color: #fff;
+  font-size: 40px;
+  display: block;
+  position: fixed;
+  float: left;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 40%;
+  padding: 5%;
+}
+
+body div img {
+  max-width: 70%;
+}
+
+a {
+  color: #fff;
+  text-transform: none;
+  text-decoration: none;
+}
+
+menu {
+  padding: 20px;
+  float: right;
+}
+
+menu a img {
+  width: 40px;
+  margin-bottom: 10px;
+}
