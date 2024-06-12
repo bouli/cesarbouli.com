@@ -5,19 +5,19 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    if request.headers["Host"] == "cesarbouli.com":
-        domain = "cesarbouli.com"
-        artist_name = "Cesar Bouli"
-        meta_text = f"Ouça {artist_name}."
-        meta_title = f"Ouça {artist_name}."
+    if request.headers["Host"] == "byeceebee.com":
+        domain = "byeceebee.com"
+        artist_name = "ByeCeeBee"
+        meta_text = f"Listen to {artist_name}."
+        meta_title = f"Listen to {artist_name}."
         meta_url = f"http://{domain}"
-        cta = 'Ouça o Disco "Cesar Bouli"'
-        cta_url = "cesarbouli"
-        soundcloud_link = "https://soundcloud.com/cesar-bouli"
-        facebook_link = "https://www.facebook.com/cesarbouli"
-        instagram_link = "https://instagram.com/salviasupernova"
-        youtube_link = "https://www.youtube.com/cesarbouli"
-        spotify_link = "https://open.spotify.com/artist/16K0CW2ObGqglDFtWjxbMb"
+        cta = 'Listen to "Diana"'
+        cta_url = "diana"
+        soundcloud_link = False
+        facebook_link = False
+        instagram_link = "https://www.instagram.com/byeceebee"
+        youtube_link = "https://www.youtube.com/@ByeCeeBee"
+        spotify_link = "https://open.spotify.com/artist/6sJjhXfbYaWZXeVL81BZiz"
     elif request.headers["Host"] == "salviasupernova.com.br":
         domain = "salviasupernova.com.br"
         artist_name = "Salvia Supernova"
@@ -32,18 +32,18 @@ def index():
         youtube_link = "https://www.youtube.com/@salviasupernova"
         spotify_link = "https://open.spotify.com/artist/7i3TMpT0F2YqHDS1MEstLO"
     else:
-        domain = "byeceebee.com"
-        artist_name = "ByeCeeBee"
-        meta_text = f"Listen to {artist_name}."
-        meta_title = f"Listen to {artist_name}."
+        domain = "cesarbouli.com"
+        artist_name = "Cesar Bouli"
+        meta_text = f"Ouça {artist_name}."
+        meta_title = f"Ouça {artist_name}."
         meta_url = f"http://{domain}"
-        cta = 'Listen to "Diana"'
-        cta_url = "diana"
-        soundcloud_link = False
-        facebook_link = False
-        instagram_link = "https://www.instagram.com/byeceebee"
-        youtube_link = "https://www.youtube.com/@ByeCeeBee"
-        spotify_link = "https://open.spotify.com/artist/6sJjhXfbYaWZXeVL81BZiz"
+        cta = 'Ouça o Disco "Fios Naturais"'
+        cta_url = "fiosnaturais"
+        soundcloud_link = "https://soundcloud.com/cesar-bouli"
+        facebook_link = "https://www.facebook.com/cesarbouli"
+        instagram_link = "https://instagram.com/cesarbouli"
+        youtube_link = "https://www.youtube.com/cesarbouli"
+        spotify_link = "https://open.spotify.com/artist/16K0CW2ObGqglDFtWjxbMb"
 
     return render_template(
         "index.jinja",
@@ -72,6 +72,11 @@ def diana():
     return redirect("https://open.spotify.com/track/7GPSPivgaqYPQ6FstxXi9C")
 
 
+@app.route("/happy-end")
+def happyend():
+    return redirect("https://open.spotify.com/album/427He8WE8uuO4ECdchYhh8")
+
+
 @app.route("/cesar-bouli")
 def cesarbouli():
     return redirect("https://distrokid.com/hyperfollow/cesarbouli/cesar-bouli")
@@ -90,3 +95,7 @@ def comosefosseaultimavez():
 @app.route("/vale-a-pena")
 def valeapena():
     return redirect("https://distrokid.com/hyperfollow/cesarbouli/vale-a-pena-4")
+
+@app.route("/fios-naturais")
+def fiosnaturais():
+    return redirect("https://distrokid.com/hyperfollow/cesarbouli/fios-naturais")
