@@ -99,3 +99,6 @@ def valeapena():
 @app.route("/fios-naturais")
 def fiosnaturais():
     return redirect("https://distrokid.com/hyperfollow/cesarbouli/fios-naturais")
+
+if __name__ == "__main__":
+    app.run()
