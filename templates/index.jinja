@@ -64,12 +64,14 @@
 
 </head>
 <body>
+	{% if cta %}
 	<div id="disco">
 			<a alt="'{{ cta }}'" title="{{ cta }}'" href="{{ url_for(cta_url) }}" target="_blank"><img src="{{ url_for('static', filename="images/" + domain + "/cta.jpg") }}" /><br />
 				{{ cta }}
 			</a>
 		<br />
 	</div>
+	{% endif %}
 	<img src="{{ url_for('static',filename="images/" + domain + "/logo.png") }}" alt="{{ artist_name }}" class="logo" />
 	<menu>
 		{% if soundcloud_link %}

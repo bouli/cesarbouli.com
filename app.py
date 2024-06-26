@@ -21,16 +21,16 @@ def index():
     elif request.headers["Host"] == "salviasupernova.com.br":
         domain = "salviasupernova.com.br"
         artist_name = "Salvia Supernova"
-        meta_text = f"Ouça {artist_name}."
-        meta_title = f"Ouça {artist_name}."
+        meta_text = f"{artist_name}."
+        meta_title = f"{artist_name}."
         meta_url = f"http://{domain}"
-        cta = 'Ouça o Disco "α"'
-        cta_url = "alpha"
+        cta = False
+        cta_url = False
         soundcloud_link = False
         facebook_link = False
         instagram_link = "https://www.instagram.com/salviasupernova"
-        youtube_link = "https://www.youtube.com/@salviasupernova"
-        spotify_link = "https://open.spotify.com/artist/7i3TMpT0F2YqHDS1MEstLO"
+        youtube_link = False #"https://www.youtube.com/@salviasupernova"
+        spotify_link = False #"https://open.spotify.com/artist/7i3TMpT0F2YqHDS1MEstLO"
     else:
         domain = "cesarbouli.com"
         artist_name = "Cesar Bouli"
@@ -60,11 +60,6 @@ def index():
         youtube_link=youtube_link,
         spotify_link=spotify_link,
     )
-
-
-@app.route("/alpha")
-def alpha():
-    return redirect("https://distrokid.com/hyperfollow/salviasupernova/3j29b2Stjw3")
 
 
 @app.route("/diana")
