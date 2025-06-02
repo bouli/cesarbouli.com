@@ -66,7 +66,7 @@ func main() {
 		http.Redirect(w, r, "https://distrokid.com/hyperfollow/cesarbouli/fios-naturais", http.StatusFound)
 	})
 
-	http.ListenAndServe(":80", nil)
+	http.ListenAndServe(":8000", nil)
 }
 
 func getTemplateData(r *http.Request) templateData {
