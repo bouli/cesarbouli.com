@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
+	"os"
 	"text/template"
 )
 
@@ -29,12 +31,18 @@ type templateData struct {
 }
 
 func main() {
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Println(r.Host)
-		fmt.Println()
+		port := os.Getenv("PORT")
+		fmt.Println(port)
 		main := template.Must(template.ParseFiles("templates/index.html"))
 		main.Execute(w, getTemplateData(r))
 	})
@@ -66,7 +74,7 @@ func main() {
 		http.Redirect(w, r, "https://distrokid.com/hyperfollow/cesarbouli/fios-naturais", http.StatusFound)
 	})
 
-	http.ListenAndServe(":8000", nil)
+	http.ListenAndServe(":"+port, nil)
 }
 
 func getTemplateData(r *http.Request) templateData {
