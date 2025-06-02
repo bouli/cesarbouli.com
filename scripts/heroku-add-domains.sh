@@ -4,3 +4,5 @@ heroku domains:add salviasupernova.com.br
 heroku domains:add "*.salviasupernova.com.br"
 heroku domains:add cesarbouli.com
 heroku domains:add "*.cesarbouli.com"
+heroku domains:add paralelossa.com.br
+heroku domains:add "*.paralelossa.com.br"
