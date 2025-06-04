@@ -36,6 +36,11 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		if r.Host == "bouli.com.br" {
+			http.Redirect(w, r, "https://github.com/bouli", http.StatusFound)
+			return
+		}
+
 		fmt.Println(r.Host)
 		main := template.Must(template.ParseFiles("templates/index.html"))
 		main.Execute(w, getTemplateData(r))
