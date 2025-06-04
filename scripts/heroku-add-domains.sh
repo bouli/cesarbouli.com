@@ -6,3 +6,5 @@ heroku domains:add cesarbouli.com
 heroku domains:add "*.cesarbouli.com"
 heroku domains:add paralelossa.com.br
 heroku domains:add "*.paralelossa.com.br"
+heroku domains:add bouli.com.br
+heroku domains:add "*.bouli.com.br"
