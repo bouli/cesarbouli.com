@@ -41,6 +41,11 @@ func main() {
 			return
 		}
 
+		if r.Host == "littletalks.org" {
+			http.Redirect(w, r, "https://github.com/LittleTalksOrg", http.StatusFound)
+			return
+		}
+
 		fmt.Println(r.Host)
 		main := template.Must(template.ParseFiles("templates/index.html"))
 		main.Execute(w, getTemplateData(r))

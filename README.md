@@ -38,3 +38,4 @@ Nowadays we have the domains bellow:
 - byeceebee.com
 - salviasupernova.com.br
 - paralelossa.com.br
+- littletalks.org

@@ -8,3 +8,5 @@ heroku domains:add paralelossa.com.br
 heroku domains:add "*.paralelossa.com.br"
 heroku domains:add bouli.com.br
 heroku domains:add "*.bouli.com.br"
+heroku domains:add littletalks.org
+heroku domains:add "*.littletalks.org"
