@@ -1,12 +1,4 @@
-heroku domains:add byeceebee.com
-heroku domains:add "*.byeceebee.com"
-heroku domains:add salviasupernova.com.br
-heroku domains:add "*.salviasupernova.com.br"
-heroku domains:add cesarbouli.com
-heroku domains:add "*.cesarbouli.com"
-heroku domains:add paralelossa.com.br
-heroku domains:add "*.paralelossa.com.br"
-heroku domains:add bouli.com.br
-heroku domains:add "*.bouli.com.br"
-heroku domains:add littletalks.org
-heroku domains:add "*.littletalks.org"
+for dm in `cat domains.txt`; do
+    heroku domains:add $dm
+    heroku domains:add "*.$dm"
+done
