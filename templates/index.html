@@ -1,10 +1,8 @@
+
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-	<script>
-		//window.location.replace("https://www.youtube.com/watch?v=RJHx5Toxwzk"); //videoclipe
-	</script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122379890-1"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
@@ -13,9 +11,9 @@
 
 	  gtag('config', 'UA-166762733-1');
 	</script>
-	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
-	<meta charset="UTF-8">
-	<link rel="apple-touch-icon" sizes="57x57" href="/static/images/apple-icon-57x57.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/images/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/static/images/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="/static/images/apple-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="76x76" href="/static/images/apple-icon-76x76.png">
@@ -30,8 +28,6 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
-
-	<link rel="manifest" href="/static/images/manifest.json">
 
 	<meta name="msapplication-TileColor" content="#000000">
 	<meta name="msapplication-TileImage" content="/static/images/ms-icon-144x144.png">
@@ -49,46 +45,50 @@
 	<meta property="og:image:width" content="948" />
 	<meta property="og:image:height" content="424" />
 	<meta property="og:type" content="website" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="/static/css/reset.css" />
+	<link rel="stylesheet" href="/static/css/style.css" />
 	<style>
 		html {
 			background: url("/static/images/{{ .Domain }}/photo.jpg") no-repeat center center fixed;
 		}
 	</style>
-	<link rel="stylesheet" href="/static/css/style.css" />
 
 	<title>{{ .Meta_title }}</title>
-
 </head>
 <body>
+
+  <header><img src="/static/images/{{ .Domain }}/logo.png" alt="{{ .Artist_name }}" /></header>
+  <div class="albums">
 	{{ if .Cta_exists }}
-	<div id="disco">
-			<a alt="'{{ .Cta }}'" title="{{ .Cta }}'" href="/{{ .Cta_url }}" target="_blank"><img src="/static/images/{{ .Domain }}/cta.jpg" /><br />
-				{{ .Cta }}
-			</a>
-		<br />
-	</div>
+    <div class="album">
+      <a href="/{{ .Cta_url }}" target="_blank">
+        <img src="/static/images/{{ .Domain }}/cta.jpg" alt="'{{ .Cta }}'" title="{{ .Cta }}'"  />
+
+          <div class="album-title">{{ .Meta_title }}</div>
+          <div class="album-artist">{{ .Artist_name }}</div>
+        </a>
+    </div>
+  </div>
+  <a class="cta-button" href="/{{ .Cta_url }}" target="_blank">{{ .Cta }}</a>
 	{{ end }}
-	<img src="/static/images/{{ .Domain }}/logo.png" alt="{{ .Artist_name }}" class="logo" />
-	<menu>
+
+  <div class="socials">
+    {{ if .Spotify_exists }}
+      <a alt="{{ .Artist_name }} - Spotify" title="Follow {{ .Artist_name }} on Spotify" href="{{ .Spotify_link }}" target="_blank"><img src="/static/images/links-spotify.png" alt="Spotify"></a>
+    {{ end }}
+    {{ if .Instagram_exists }}
+      <a alt="{{ .Artist_name }} - Instagram" title="Follow {{ .Artist_name }} on Instagram" href="{{ .Instagram_link }}" target="_blank"><img src="/static/images/links-instagram.png" alt="Instagram"></a>
+    {{ end }}
+    {{ if .Youtube_exists }}
+      <a alt="{{ .Artist_name }} - Youtube" title="Follow {{ .Artist_name }} on Youtube" href="{{ .Youtube_link }}" target="_blank"><img src="/static/images/links-youtube.png" alt="Youtube"></a>
+    {{ end }}
 		{{ if .Soundcloud_exists }}
-			<a alt="{{ .Artist_name }} - SoundCloud" title="Follow {{ .Artist_name }} on SoundCloud" href="{{ .Soundcloud_link }}" target="_blank"><img src="/static/images/links-soundcloud.png" /></a></br />
+      <a alt="{{ .Artist_name }} - SoundCloud" title="Follow {{ .Artist_name }} on SoundCloud" href="{{ .Soundcloud_link }}" target="_blank"><img src="/static/images/links-spotify.png" alt="Spotify"></a>
 		{{ end }}
-		{{ if .Facebook_exists }}
-			<a alt="{{ .Artist_name }} - Facebook"   title="Follow {{ .Artist_name }} on Facebook" href="{{ .Facebook_link }}" target="_blank"><img src="/static/images/links-facebook.png" /></a></br />
-		{{ end }}
-		{{ if .Instagram_exists }}
-			<a alt="{{ .Artist_name }} - Instagram"  title="Follow {{ .Artist_name }} on Instagram" href="{{ .Instagram_link }}" target="_blank"><img src="/static/images/links-instagram.png" /></a></br />
-		{{ end }}
-		{{ if .Youtube_exists }}
-			<a alt="{{ .Artist_name }} - Youtube"    title="Follow {{ .Artist_name }} on Youtube" href="{{ .Youtube_link }}" target="_blank"><img src="/static/images/links-youtube.png" /></a></br />
-		{{ end }}
-		{{ if .Spotify_exists }}
-			<a alt="{{ .Artist_name }} - Spotify"    title="Follow {{ .Artist_name }} on Spotify" href="{{ .Spotify_link }}" target="_blank"><img src="/static/images/links-spotify.png" />
-		{{ end }}
-	</menu>
+    {{ if .Facebook_exists }}
+      <a alt="{{ .Artist_name }} - Facebook" title="Follow {{ .Artist_name }} on Facebook" href="{{ .Facebook_link }}" target="_blank"><img src="/static/images/links-facebook.png" alt="Facebook"></a>
+    {{ end }}
+  </div>
+
 </body>
 </html>
