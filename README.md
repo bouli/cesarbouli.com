@@ -31,11 +31,14 @@ heroku push heroku main
 heroku open
 ```
 
-To install the domains are in [scripts/heroku-add-domains.sh](scripts/heroku-add-domains.sh).
-Nowadays we have the domains bellow:
+To install the domains, use the script [scripts/heroku-add-domains.sh](scripts/heroku-add-domains.sh).
+Nowadays we have the domains bellow, but we use the list on file [scripts/domains.txt](scripts/domains.txt) :
 - bouli.com.br
 - cesarbouli.com
 - byeceebee.com
 - salviasupernova.com.br
 - paralelossa.com.br
 - littletalks.org
+
+To update and publish domains in cloudflare, use the script [scripts/cloudflare-update-domains.sh](scripts/cloudflare-update-domains.sh).
+The script will delete all "CNAME" DNS records for cloudflare, and create new ones just for a generic one.
