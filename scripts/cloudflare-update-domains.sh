@@ -52,6 +52,9 @@ for domain_record in `cat heroku_cnames.txt`; do
                "type": "CNAME"
           }'
 
+     #purge cache
+     curl "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/purge_cache" \
+          -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"
 done
 
 rm heroku_cnames.txt
