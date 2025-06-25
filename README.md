@@ -17,6 +17,11 @@ brew install go
 go run .
 ```
 
+Environmet Variables - Application
+----
+
+- PORT: HTTP server port. Default 80
+
 Deploy
 ----
 
@@ -42,3 +47,8 @@ Nowadays we have the domains bellow, but we use the list on file [scripts/domain
 
 To update and publish domains in cloudflare, use the script [scripts/cloudflare-update-domains.sh](scripts/cloudflare-update-domains.sh).
 The script will delete all "CNAME" DNS records for cloudflare, and create new ones just for a generic one.
+
+Environmet Variables - Cloudflare Domains Update
+----
+
+- CLOUDFLARE_API_TOKEN: Cloudflare API Token for domains update.
