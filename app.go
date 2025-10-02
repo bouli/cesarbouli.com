@@ -35,10 +35,6 @@ func main() {
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	http.HandleFunc("/cv", func(w http.ResponseWriter, r *http.Request) {
-		http.Redirect(w, r, "https://drive.google.com/file/d/1fdwQ53S-H3Qje-75IP-dZ4Aja2S-ASVC/view?usp=drive_link", http.StatusFound)
-	})
-
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.Host == "bouli.com.br" {
 			http.Redirect(w, r, "https://github.com/bouli", http.StatusFound)
