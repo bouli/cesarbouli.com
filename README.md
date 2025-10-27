@@ -44,6 +44,7 @@ Nowadays we have the domains bellow, but we use the list on file [scripts/domain
 - salviasupernova.com.br
 - paralelossa.com.br
 - littletalks.org
+- cesarcardoso.cc
 
 To update and publish domains in cloudflare, use the script [scripts/cloudflare-update-domains.sh](scripts/cloudflare-update-domains.sh).
 The script will delete all "CNAME" DNS records for cloudflare, and create new ones just for a generic one.
