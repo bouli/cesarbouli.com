@@ -37,6 +37,13 @@ func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		if r.Host == "cesarcardoso.cc" {
+			if r.URL.Path == "/resume" {
+				if r.URL.Path == "/resume" {
+					main := template.Must(template.ParseFiles("cesarcardoso.cc/resume.html"))
+					main.Execute(w, nil)
+					return
+				}
+			}
 			http.Redirect(w, r, "https://www.linkedin.com/in/cesardesouzacardoso/", http.StatusFound)
 			return
 		}
