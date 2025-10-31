@@ -69,6 +69,11 @@ func main() {
 			return
 		}
 
+		if r.Host == "ohsanaworks.com" {
+			http.Redirect(w, r, "https://www.instagram.com/ohsanaworks", http.StatusFound)
+			return
+		}
+
 		if r.Host == "littletalks.org" {
 			http.Redirect(w, r, "https://github.com/LittleTalksOrg", http.StatusFound)
 			return
