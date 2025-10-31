@@ -35,16 +35,21 @@ func main() {
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
+	fs_assets := http.FileServer(http.Dir("cesarcardoso.cc/assets"))
+	http.Handle("/assets/", http.StripPrefix("/assets/", fs_assets))
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+
 		if r.Host == "cesarcardoso.cc" {
 			if r.URL.Path == "/resume" {
 				if r.URL.Path == "/resume" {
-					main := template.Must(template.ParseFiles("cesarcardoso.cc/resume.html"))
+					main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/index.html"))
 					main.Execute(w, nil)
 					return
 				}
 			}
-			http.Redirect(w, r, "https://www.linkedin.com/in/cesardesouzacardoso/", http.StatusFound)
+			main := template.Must(template.ParseFiles("cesarcardoso.cc/index.html"))
+			main.Execute(w, nil)
 			return
 		}
 
