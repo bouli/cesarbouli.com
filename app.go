@@ -41,12 +41,16 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 
 		if r.Host == "cesarcardoso.cc" {
-			if r.URL.Path == "/resume" {
-				if r.URL.Path == "/resume" {
-					main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/index.html"))
-					main.Execute(w, nil)
-					return
-				}
+			if r.URL.Path == "/de/cv" || r.URL.Path == "/lebenslauf" {
+				main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/index-de.html"))
+				main.Execute(w, nil)
+				return
+			}
+
+			if r.URL.Path == "/cv" {
+				main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/index.html"))
+				main.Execute(w, nil)
+				return
 			}
 			main := template.Must(template.ParseFiles("cesarcardoso.cc/index.html"))
 			main.Execute(w, nil)
