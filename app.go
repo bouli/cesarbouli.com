@@ -52,6 +52,13 @@ func main() {
 				main.Execute(w, nil)
 				return
 			}
+
+			if r.URL.Path == "/qr" {
+				main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/qr.html"))
+				main.Execute(w, nil)
+				return
+			}
+
 			main := template.Must(template.ParseFiles("cesarcardoso.cc/index.html"))
 			main.Execute(w, nil)
 			return
