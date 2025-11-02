@@ -46,7 +46,7 @@
 	<meta property="og:image:height" content="424" />
 	<meta property="og:type" content="website" />
 	<link rel="stylesheet" href="/static/css/reset.css" />
-	<link rel="stylesheet" href="/static/css/style.css" />
+	<link rel="stylesheet" href="/static/css/style.css?v=" />
 	<style>
 		html {
 			background: url("/static/images/{{ .Domain }}/photo.jpg") no-repeat center center fixed;
@@ -89,6 +89,8 @@
       <a alt="{{ .Artist_name }} - Facebook" title="Follow {{ .Artist_name }} on Facebook" href="{{ .Facebook_link }}" target="_blank"><img src="/static/images/links-facebook.png" alt="Facebook"></a>
     {{ end }}
   </div>
-
+  <div>
+	<a class="cta-button support-me-button" href="https://ko-fi.com/cesarbouli" target="_blank"><img src="https://storage.ko-fi.com/cdn/cup-border.png" /> buy me a coffee</a>
+  </div>
 </body>
 </html>
