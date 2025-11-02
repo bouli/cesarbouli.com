@@ -73,18 +73,18 @@
 	{{ end }}
 
   <div class="socials">
+	{{ if .Soundcloud_exists }}
+	<a alt="{{ .Artist_name }} - SoundCloud" title="Follow {{ .Artist_name }} on SoundCloud" href="{{ .Soundcloud_link }}" target="_blank"><img src="/static/images/links-soundcloud.png" alt="SoundCloud"></a>
+	{{ end }}
+    {{ if .Youtube_exists }}
+      <a alt="{{ .Artist_name }} - Youtube" title="Follow {{ .Artist_name }} on Youtube" href="{{ .Youtube_link }}" target="_blank"><img src="/static/images/links-youtube.png" alt="Youtube"></a>
+    {{ end }}
     {{ if .Spotify_exists }}
       <a alt="{{ .Artist_name }} - Spotify" title="Follow {{ .Artist_name }} on Spotify" href="{{ .Spotify_link }}" target="_blank"><img src="/static/images/links-spotify.png" alt="Spotify"></a>
     {{ end }}
     {{ if .Instagram_exists }}
       <a alt="{{ .Artist_name }} - Instagram" title="Follow {{ .Artist_name }} on Instagram" href="{{ .Instagram_link }}" target="_blank"><img src="/static/images/links-instagram.png" alt="Instagram"></a>
     {{ end }}
-    {{ if .Youtube_exists }}
-      <a alt="{{ .Artist_name }} - Youtube" title="Follow {{ .Artist_name }} on Youtube" href="{{ .Youtube_link }}" target="_blank"><img src="/static/images/links-youtube.png" alt="Youtube"></a>
-    {{ end }}
-		{{ if .Soundcloud_exists }}
-      <a alt="{{ .Artist_name }} - SoundCloud" title="Follow {{ .Artist_name }} on SoundCloud" href="{{ .Soundcloud_link }}" target="_blank"><img src="/static/images/links-spotify.png" alt="Spotify"></a>
-		{{ end }}
     {{ if .Facebook_exists }}
       <a alt="{{ .Artist_name }} - Facebook" title="Follow {{ .Artist_name }} on Facebook" href="{{ .Facebook_link }}" target="_blank"><img src="/static/images/links-facebook.png" alt="Facebook"></a>
     {{ end }}
