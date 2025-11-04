@@ -9,12 +9,17 @@ Dependencies
 
 - Golang@1.24+
 
-Install
+Install & Run
 ----
 
 ```shell
 brew install go
 go run .
+```
+
+For tests, we have the option to force some website with the argument `force-website` like this
+```shell
+go run . -force-website=mysample.com
 ```
 
 Environmet Variables - Application

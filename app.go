@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"log"
 	"net/http"
@@ -32,6 +33,11 @@ type templateData struct {
 
 func main() {
 
+	var forceWebSite string
+	flag.StringVar(&forceWebSite, "force-website", "", "force website")
+	flag.Parse()
+
+	fmt.Println(os.Args)
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
@@ -40,7 +46,7 @@ func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 
-		if r.Host == "cesarcardoso.cc" {
+		if r.Host == "cesarcardoso.cc" || forceWebSite == "cesarcardoso.cc" {
 			if r.URL.Path == "/de/cv" || r.URL.Path == "/lebenslauf" {
 				main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/index-de.html"))
 				main.Execute(w, nil)
@@ -64,24 +70,24 @@ func main() {
 			return
 		}
 
-		if r.Host == "bouli.com.br" {
+		if r.Host == "bouli.com.br" || forceWebSite == "bouli.com.br" {
 			http.Redirect(w, r, "https://github.com/bouli", http.StatusFound)
 			return
 		}
 
-		if r.Host == "ohsanaworks.com" {
+		if r.Host == "ohsanaworks.com" || forceWebSite == "ohsanaworks.com" {
 			http.Redirect(w, r, "https://www.instagram.com/ohsanaworks", http.StatusFound)
 			return
 		}
 
-		if r.Host == "littletalks.org" {
+		if r.Host == "littletalks.org" || forceWebSite == "littletalks.org" {
 			http.Redirect(w, r, "https://github.com/LittleTalksOrg", http.StatusFound)
 			return
 		}
 
 		fmt.Println(r.Host)
 		main := template.Must(template.ParseFiles("templates/index.html"))
-		main.Execute(w, getTemplateData(r))
+		main.Execute(w, getTemplateData(r, forceWebSite))
 	})
 
 	http.HandleFunc("/como-se-fosse-a-ultima-vez", func(w http.ResponseWriter, r *http.Request) {
@@ -119,9 +125,9 @@ func main() {
 	http.ListenAndServe(":"+getServerPort(), nil)
 }
 
-func getTemplateData(r *http.Request) templateData {
+func getTemplateData(r *http.Request, forceWebSite string) templateData {
 
-	if r.Host == "byeceebee.com" {
+	if r.Host == "byeceebee.com" || forceWebSite == "byeceebee.com" {
 		return templateData{
 			Domain:            r.Host,
 			Url_path:          r.URL.Path,
@@ -143,7 +149,7 @@ func getTemplateData(r *http.Request) templateData {
 			Spotify_link:      "https://open.spotify.com/artist/6sJjhXfbYaWZXeVL81BZiz",
 			Spotify_exists:    true,
 		}
-	} else if r.Host == "salviasupernova.com.br" {
+	} else if r.Host == "salviasupernova.com.br" || forceWebSite == "salviasupernova.com.br" {
 		return templateData{
 			Domain:            r.Host,
 			Url_path:          r.URL.Path,
@@ -165,7 +171,7 @@ func getTemplateData(r *http.Request) templateData {
 			Spotify_link:      "https://open.spotify.com/artist/7i3TMpT0F2YqHDS1MEstLO",
 			Spotify_exists:    true,
 		}
-	} else if r.Host == "paralelossa.com.br" {
+	} else if r.Host == "paralelossa.com.br" || forceWebSite == "paralelossa.com.br" {
 		return templateData{
 			Domain:            r.Host,
 			Url_path:          r.URL.Path,
