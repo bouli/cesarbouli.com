@@ -48,13 +48,13 @@ func main() {
 
 		if r.Host == "cesarcardoso.cc" || forceWebSite == "cesarcardoso.cc" {
 			if r.URL.Path == "/de/cv" || r.URL.Path == "/lebenslauf" {
-				main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/index-de.html"))
+				main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/resume-for-web-de.html"))
 				main.Execute(w, nil)
 				return
 			}
 
 			if r.URL.Path == "/cv" {
-				main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/index.html"))
+				main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/resume-for-web-en.html"))
 				main.Execute(w, nil)
 				return
 			}
