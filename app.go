@@ -54,7 +54,7 @@ func main() {
 			}
 
 			if r.URL.Path == "/cv" {
-				main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/resume-for-web-en.html"))
+				main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/resume-for-web-en	.html"))
 				main.Execute(w, nil)
 				return
 			}
@@ -100,6 +100,10 @@ func main() {
 
 	http.HandleFunc("/happy-end", func(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "https://open.spotify.com/album/427He8WE8uuO4ECdchYhh8", http.StatusFound)
+	})
+
+	http.HandleFunc("/padroeira", func(w http.ResponseWriter, r *http.Request) {
+		http.Redirect(w, r, "https://open.spotify.com/album/3nSxhCNm1SY1XzAvblzqH1", http.StatusFound)
 	})
 
 	http.HandleFunc("/cesar-bouli", func(w http.ResponseWriter, r *http.Request) {
