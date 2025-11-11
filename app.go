@@ -54,7 +54,7 @@ func main() {
 			}
 
 			if r.URL.Path == "/cv" {
-				main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/resume-for-web-en	.html"))
+				main := template.Must(template.ParseFiles("cesarcardoso.cc/resume/resume-for-web-en.html"))
 				main.Execute(w, nil)
 				return
 			}
