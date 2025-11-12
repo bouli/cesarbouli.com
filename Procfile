@@ -1,1 +1,1 @@
-web: bin/cesarbouli.com
+web: bin/boulihub
