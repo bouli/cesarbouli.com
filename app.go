@@ -42,8 +42,6 @@ func main() {
 			return
 		}
 
-		//w.WriteHeader(http.StatusNotFound)
-
 		http.Redirect(w, r, utils.GetHttpProtocolString(r)+"://"+r.Host, http.StatusNotFound)
 
 	})
